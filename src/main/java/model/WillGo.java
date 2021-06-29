@@ -8,6 +8,14 @@ public class WillGo implements Serializable {
     private int userID;
     private String willGoDate;
 
+    public WillGo(int willGoID, int postID, int userID, String willGoDate) {
+        this.willGoID = willGoID;
+        this.postID = postID;
+        this.userID = userID;
+        this.willGoDate = willGoDate;
+
+    }
+
     public WillGo(int postID, int userID, String willGoDate) {
         this.postID = postID;
         this.userID = userID;

@@ -57,12 +57,8 @@ public class WillGoServlet extends HttpServlet {
 		WillGo willGo = new WillGo(postID, userID, willGoDate);
 		WillGoDAO wDAO = new WillGoDAO();
 		wDAO.createWillGo(willGo);
-
 		// この時点ではPOST_IDがインスタンスに含まれていないため、インスタンスに含まれるようにする
 		willGo = wDAO.readLastPost();
-
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/mainpage.jsp");
-		dispatcher.forward(request, response);
 	}
 
 }
